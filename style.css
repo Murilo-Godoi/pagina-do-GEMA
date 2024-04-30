@@ -1,0 +1,123 @@
+:root {
+    --azul-primario: #191946;
+    --branco: #FFFFFF;
+    --amarelo: #C39F00;
+    --azul-secundário: #1A1A4E;
+    --azul-terciário: #212160;
+    --bg_azul: #111133;
+    --bg-bege: #ECECEC;
+    --text_bege: #DBDBDB;
+    --text_bege_dark: #D2D2D2;
+    --text_cinza: #4C4C4C;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+.header {
+    padding-top: 40px;
+}
+
+.header img {
+    height: 80px;
+}
+
+.header p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.cover {
+    background-color: var(--bg_azul);
+    color: var(--branco);
+    height: 100vh;
+    position: relative;
+    padding-left: 75px;
+}
+
+.cover-h1 {
+    font-size: 60px;
+    line-height: 90px;
+    margin: 0px;
+    font-weight: 800;
+    color: var(--branco);
+}
+
+.cover-paragraph {
+    font-size: 34px;
+    line-height: 51px;
+    font-weight: 500;
+    margin: 0px;
+    margin-bottom: 30px;
+    color: var(--text_bege);
+}
+
+.cover-footer {
+    padding-bottom: 30px;
+}
+
+.cover-footer img {
+    height: 32px;
+    margin-right: 24px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+.btn-yellow {
+    width: 262px;
+    height: 46px;
+    font-size: 22.5px;
+    font-weight: 500;
+    line-height: 51px;
+    color: var(--branco);
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0.7rem;
+    background-color: var(--amarelo);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balao-img {
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.balao-img img {
+    height: 90vh;
+}
