@@ -191,7 +191,6 @@ body {
     font-weight: 500;
     line-height: 45px;
     text-align: center;
-
 }
 
 .card-con {
@@ -218,4 +217,137 @@ body {
     font-weight: 500;
     line-height: 36px;
     text-align: center;
+}
+
+
+/* Premios */
+.premios{
+    background-color: var(--bg-bege);
+    height: 741px;
+    padding-top: 62px;
+}
+
+.premios-card{
+    padding: 35px 0;
+}
+
+.premios-img {
+    height: 133px;
+    width: 133px;
+    margin: 0 auto;
+}
+
+.premios-medalhas {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 11px;
+}
+
+.medalha-item {
+    display: flex;
+    align-items: center;
+}
+
+.medalha-item img{
+    width: 22.37px;
+    height: 26.67px;    
+}
+
+.medalha-item p{
+    margin-left: 8px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+}
+
+.premios-h2{
+    color: #000000;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 75px;
+    text-align: center;
+}
+
+.premios-paragraph {
+    color: var(--text_cinza);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: center;
+}
+
+.premios button {
+    margin: 11px auto;
+}
+
+/* Contato */
+.contato {
+    height: 346px;
+    text-align: center;
+    padding: 68px 0;
+    background-color: var(--bg_azul);
+}
+
+.contato h2 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 75px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contato p {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: center;
+    color: #C8C8C8;
+    margin-bottom: 23px;
+}
+
+.contato-img{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+
+#youtube-img{
+    width: 68.33px;
+    height: 47.83px;
+}
+
+#instagram-img{
+    width: 68.33px;
+    height: 69.17px;
+}
+
+#telegram-img{
+    width: 64.81px;
+    height: 59.45px;
+}
+
+/* Footer */
+.footer {
+    height: 112px;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+.footer p {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.025em;
+    text-align: left;
+}
+
+.text-azul{
+    color: #5ED8FF;
 }
