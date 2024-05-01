@@ -1,3 +1,12 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
 :root {
     --azul-primario: #191946;
     --branco: #FFFFFF;
@@ -159,4 +168,54 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+/* Midia */
+.midia{
+    background-color: var(--bg_azul);
+    height: 735px;
+    padding-top: 62px;
+}
+
+.midia-h2{
+    color: white;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 75px;
+    text-align: center;
+}
+
+.midia-paragraph {
+    color: var(--text_bege_dark);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: center;
+
+}
+
+.card-con {
+    display: flex;
+    max-width: 1391px;
+    justify-content: space-between;
+    margin: 61px auto;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 427px;
+    height: 399px;
+    color: var(--text_cinza);
+    word-wrap: break-word;
+    background-color: var(--branco);
+    border-radius: 1.5rem;
+}
+
+.card-text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
 }
