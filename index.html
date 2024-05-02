@@ -105,8 +105,8 @@
     <section id="premios">
         <div class="premios">
             <div class="premios-text">
-                <h2 class="premios-h2">GEMA na Mídia</h2>
-                <p class="premios-paragraph">Veja o que andam falando do GEMA!</p>
+                <h2 class="premios-h2">Premiações do GEMA!</h2>
+                <p class="premios-paragraph">Veja o que já ganhamos por ai ;)</p>
             </div>
 
             <div class="card-con">
@@ -128,7 +128,7 @@
                     </div>
                     <div>
                         <p class="card-text">Olimpíada Brasileira de Informática (OBI)</p>
-                        <button class="btn-yellow">Conhecer</button>
+                        <button id="campCard-0" class="btn-yellow modal-toggle">Ver Mais</button>
                     </div>
                 </div>
                 <div class="card premios-card">
@@ -150,7 +150,7 @@
                     </div>
                     <div>
                         <p class="card-text">International Collegiate Programming Contest (ICPC)</p>
-                        <button class="btn-yellow">Conhecer</button>
+                        <button class="btn-yellow modal-toggle">Ver Mais</button>
                     </div>
                 </div>
                 <div class="card premios-card">
@@ -172,7 +172,7 @@
                     </div>
                     <div>
                         <p class="card-text">Maratona Feminina de Programação (MEP)</p>
-                        <button class="btn-yellow">Conhecer</button>
+                        <button class="btn-yellow modal-toggle">Ver Mais</button>
                     </div>
                 </div>
             </div>
@@ -188,7 +188,7 @@
                 <img id="youtube-img" src="./img/youtube.png" alt="icone do youtube">
                 <img id="instagram-img" src="./img/instagram.png" alt="icone do instagram">
                 <img id="telegram-img" src="./img/telegram.png" alt="icone do telegram">
-            </div>            
+            </div>
         </div>
     </section>
 
@@ -197,7 +197,23 @@
             <p>Gema - ICMC USP 2024</p>
             <p>Desenvolvido pelo <span class="text-azul">Codelab</span></p>
         </div>
-        </section>
+    </section>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-container">
+            <span class="close">&times;</span>
+            
+            <div id="modal-content" class="modal-content">
+
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script src="./info.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
