@@ -1,12 +1,3 @@
-*, 
-*:after,
-*:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
 :root {
     --azul-primario: #191946;
     --branco: #FFFFFF;
@@ -22,65 +13,87 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
+}
+
+/* Estilos de texto */
+h1 {
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 800;
+}
+
+@media (min-width: 768px) {
+    h1{
+        font-size: 3.125vw;
+        line-height: 4.69vw;
+    }
+    h2{
+        font-size: 2.6vw;
+        line-height: 3.9vw;
+    }
+    .text-medio {   
+        font-size: 1.56vw;
+        line-height: 2.34vw;
+    }
+    .text-grande {
+        font-size: 1.77vw;
+        line-height: 2.65vw;
+    }
+    
+}
+
+.text-medio {   
+    font-weight: 500;
+    text-align: center;
+}
+
+.text-grande {
+    font-weight: 500;
+}
+
+.text-small{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Cores */
+.text-cinza {color: var(--text_cinza)}
+.text-bege {color: var(--text_bege)}
+.text-branco {color: var(--branco)}
+.text-bege-dark{color: var(--text_bege_dark);}
+
+.bg-azul{background-color: var(--bg_azul)}
+.bg-bege {background-color: var(--bg-bege)}
+
+/* Cards */
+
+.card {
+    max-width: 411px;
+    min-height: 399px;
+    border-radius: 1.5rem;
 }
 
 /* Primeira sessão do site */
-.cover {
-    background-color: var(--bg_azul);
-    color: var(--branco);
-    height: 100vh;
-    position: relative;
-    padding-left: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.cover-header {
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.cover-header img {
+.logo-img {
     height: 80px;
 }
 
-.header-menu-con {
-    display: flex;
-    align-items: center;
-    gap: 34px;
-    margin-right: 38px;
-}
-
-.cover-header p {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.cover-h1 {
-    font-size: 60px;
-    line-height: 90px;
-    margin: 0px;
-    font-weight: 800;
-    color: var(--branco);
-}
-
-.cover-paragraph {
-    font-size: 34px;
-    line-height: 51px;
-    font-weight: 500;
-    margin: 0px;
-    margin-bottom: 30px;
-    color: var(--text_bege);
+.header-menu {
+/*  deixa alinhado com o logo do GEMA, se colocasse no boostrap 
+ele vai tentar alinhar antes de setar essa altura de 80px 
+e por isso nao alinha */
+    height: 80px;
+    align-items: center; 
 }
 
 .btn-yellow {
     width: 262px;
+    max-width: 80%;
     height: 46px;
     font-size: 22.5px;
     font-weight: 500;
@@ -97,65 +110,18 @@ body {
     justify-content: center;
 }
 
-.balao-img {
-    position: absolute;
-    bottom: 0;
-    right: 100px;
+.img-fluid{
+    max-height: 85vh;
 }
 
-.balao-img img  {
-    height: 90vh;
-}
-
-.cover-footer {
-    padding-bottom: 30px;
-}
-
-.cover-footer img {
+.cover-footer-img {
     height: 32px;
-    margin-right: 24px;
 }
 
 /* Sesão Sobre */
-
-.about {
-    padding-left: 75px;
-    padding-right: 75px;
-    min-height: 741px;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--bg-bege);
-}
-
-.about-text {
-    max-width: 65%;
-}
-
-.about-h2 {
-    font-size: 50px;
-    line-height: 75px;
-    font-weight: 800;
-    color: #121212;
-    margin: 68px 0 26px 0;
-}
-
-.about-paragraph {
-    margin: 0;
-    font-size: 34px;
-    line-height: 51px;
-    font-weight: 500;
-    color: var(--text_cinza);
-}
-
 .about-img {
-    width: 511px;
     height: 497px;
     position: relative;
-    margin-top: 87px;
-}
-
-.about-img img {
-    height: 286px;
 }
 
 .img-equipe1 {
@@ -170,115 +136,12 @@ body {
     right: 0;
 }
 
-/* Midia */
-.midia{
-    background-color: var(--bg_azul);
-    height: 735px;
-    padding-top: 62px;
-}
-
-.midia-h2{
-    color: white;
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 75px;
-    text-align: center;
-}
-
-.midia-paragraph {
-    color: var(--text_bege_dark);
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 45px;
-    text-align: center;
-}
-
-.card-con {
-    display: flex;
-    max-width: 1391px;
-    justify-content: space-between;
-    margin: 61px auto;
-}
-
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 427px;
-    height: 399px;
-    color: var(--text_cinza);
-    word-wrap: break-word;
-    background-color: var(--branco);
-    border-radius: 1.5rem;
-}
-
-.card-text {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 36px;
-    text-align: center;
-}
-
-
 /* Premios */
-.premios{
-    background-color: var(--bg-bege);
-    height: 741px;
-    padding-top: 62px;
-}
-
-.premios-card{
-    padding: 35px 0;
-}
 
 .premios-img {
     height: 133px;
     width: 133px;
     margin: 0 auto;
-}
-
-.premios-medalhas {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 11px;
-}
-
-.medalha-item {
-    display: flex;
-    align-items: center;
-}
-
-.medalha-item img{
-    width: 22.37px;
-    height: 26.67px;    
-}
-
-.medalha-item p{
-    margin-left: 8px;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 36px;
-    text-align: center;
-}
-
-.premios-h2{
-    color: #000000;
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 75px;
-    text-align: center;
-}
-
-.premios-paragraph {
-    color: var(--text_cinza);
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 45px;
-    text-align: center;
-}
-
-.premios button {
-    margin: 11px auto;
 }
 
 /* Contato */
