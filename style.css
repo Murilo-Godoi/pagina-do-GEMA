@@ -24,6 +24,24 @@ h2 {
     font-weight: 800;
 }
 
+.text-medio {   
+    font-weight: 500;
+    text-align: center;
+}
+
+.text-grande {
+    font-weight: 500;
+}
+
+.text-small{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
 @media (min-width: 768px) {
     h1{
         font-size: 3.125vw;
@@ -44,32 +62,15 @@ h2 {
     
 }
 
-.text-medio {   
-    font-weight: 500;
-    text-align: center;
-}
-
-.text-grande {
-    font-weight: 500;
-}
-
-.text-small{
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 36px;
-    text-align: center;
-    margin-bottom: 0;
-}
-
 /* Cores */
 .text-cinza {color: var(--text_cinza)}
 .text-bege {color: var(--text_bege)}
 .text-branco {color: var(--branco)}
 .text-bege-dark{color: var(--text_bege_dark);}
-
+.text-azul{color: #5ED8FF}
 .bg-azul{background-color: var(--bg_azul)}
 .bg-bege {background-color: var(--bg-bege)}
-
+.bg-preto {background-color: #282828}
 /* Cards */
 
 .card {
@@ -79,6 +80,10 @@ h2 {
 }
 
 /* Primeira sessão do site */
+.cover  {
+    min-height: 100vh;
+}
+
 .logo-img {
     height: 80px;
 }
@@ -145,38 +150,6 @@ e por isso nao alinha */
 }
 
 /* Contato */
-.contato {
-    height: 346px;
-    text-align: center;
-    padding: 68px 0;
-    background-color: var(--bg_azul);
-}
-
-.contato h2 {
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 75px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.contato p {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 45px;
-    text-align: center;
-    color: #C8C8C8;
-    margin-bottom: 23px;
-}
-
-.contato-img{
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 23px;
-}
-
 #youtube-img{
     width: 68.33px;
     height: 47.83px;
@@ -193,16 +166,7 @@ e por isso nao alinha */
 }
 
 /* Footer */
-.footer {
-    height: 112px;
-    background-color: #282828;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 80px;
-}
-
-.footer p {
+.text-footer {
     color: #FFFFFF;
     font-size: 14px;
     font-weight: 500;
@@ -211,12 +175,8 @@ e por isso nao alinha */
     text-align: left;
 }
 
-.text-azul{
-    color: #5ED8FF;
-}
-
-/* Modal */
-.modal {
+/* Modall */
+.modall {
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -231,7 +191,7 @@ e por isso nao alinha */
 }
 
 
-.modal-container {
+.modall-container {
     background-color: #fefefe;
     margin: auto;
     padding: 52px;
@@ -255,45 +215,53 @@ e por isso nao alinha */
     cursor: pointer;
 }
 
-.modal-medalhista{
+.modall-medalhista{
     display: flex;
     align-items: center;
 }
 
-.modal-header{
+.modall-medalhista p{
+    margin-bottom: 0;
+}
+
+.modall-header{
     display: flex;
     align-items: center;
     gap: 21px;
     margin-bottom: 31px;
 }
 
-.modal-header img{
+.medalhista-posicao{
+    width: 20px;
+}
+
+.modall-header img{
     height: 79px;
     width: 79px;
 }
 
-.modal-header h3{
+.modall-header h3{
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
     text-align: left;
 }
 
-.modal-year h4{
+.modall-year h4{
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
     text-align: left;
 }
 
-.modal-medalhista p {
+.modall-medalhista p {
     font-size: 24px;
     font-weight: 500;
     line-height: 36px;
     text-align: left;
 }
 
-.modal-medalhista img {
+.modall-medalhista img {
     width: 22.37px;
     height: 26.67px;
     margin-left: 7px;

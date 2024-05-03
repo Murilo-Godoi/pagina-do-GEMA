@@ -18,14 +18,14 @@
 
 <body>
     <section id="capa">
-        <div class="bg-azul px-5 pt-5 d-flex justify-content-between">
+        <div class="cover bg-azul px-5 pt-5 d-flex justify-content-between">
             <div class="d-flex flex-column justify-content-between text-center text-md-start mx-auto mx-md-0">
                 <div>
                     <img src="./img/logo_gema.png" alt="Logotipo do GEMA" class="img-fluid logo-img">
                 </div>
 
                 <div class="d-flex flex-column align-items-center d-md-block">
-                    <h1 class="text-branco">O Grupo de Programação<br>Competitiva da USP.</h1>
+                    <h1 class="text-branco mb-4 mb-md-0">O Grupo de Programação<br>Competitiva da USP.</h1>
                     <p class="text-grande text-bege">Quer aprender os algoritmos mais avançados <br>e ganhar medalhas?
                         Cola
                         com a gente!</p>
@@ -115,82 +115,19 @@
                 <p class="text-medio text-cinza">Veja o que já ganhamos por ai ;)</p>
             </div>
 
-            <div class="d-flex flex-column flex-md-row gap-5 align-items-center justify-content-center m-4">
-                <div class="card py-4">
-                    <img class="premios-img" src="./img/olimpiada_brasileira.png" alt="simbolo da olimpiada brasileira">
-                    <div class="d-flex justify-content-evenly mt-3 mb-2">
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_ouro.png" alt="medalhas de ouro">
-                            <p class="text-small">10</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_prata.png" alt="medalhas de prata">
-                            <p class="text-small">6</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_bronze.png" alt="medalhas de bronze">
-                            <p class="text-small">4</p>
-                        </div>
-                    </div>
-                    <div class="px-3">
-                        <p class="text-small">Olimpíada Brasileira de Informática (OBI)</p>
-                        <button id="campCard-0" class="mx-auto btn-yellow modal-toggle">Ver Mais</button>
-                    </div>
-                </div>
-                <div class="card py-4">
-                    <img class="premios-img" src="./img/ICPC.png"
-                        alt="simbolo do International Collegiate Programming Contest">
-                    <div class="d-flex justify-content-evenly mt-3 mb-2">
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_ouro.png" alt="medalhas de ouro">
-                            <p class="text-small">10</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_prata.png" alt="medalhas de prata">
-                            <p class="text-small">6</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_bronze.png" alt="medalhas de bronze">
-                            <p class="text-small">4</p>
-                        </div>
-                    </div>
-                    <div class="px-3">
-                        <p class="text-small">International Collegiate Programming Contest (ICPC)</p>
-                        <button class="mx-auto btn-yellow modal-toggle">Ver Mais</button>
-                    </div>
-                </div>
-                <div class="card py-4">
-                    <img class="premios-img" src="./img/maratona_feminina.png"
-                        alt="simbolo da maratona feminina de programação">
-                    <div class="d-flex justify-content-evenly mt-3 mb-2">
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_ouro.png" alt="medalhas de ouro">
-                            <p class="text-small">10</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_prata.png" alt="medalhas de prata">
-                            <p class="text-small">6</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <img src="./img/medalha_bronze.png" alt="medalhas de bronze">
-                            <p class="text-small">4</p>
-                        </div>
-                    </div>
-                    <div class="px-3">
-                        <p class="text-small">Maratona Feminina de Programação (MEP)</p>
-                        <button class="mx-auto btn-yellow modal-toggle">Ver Mais</button>
-                    </div>
-                </div>
+            <div id="card-container" class="d-flex flex-column flex-md-row gap-5 align-items-center justify-content-center m-4">
+
             </div>
 
         </div>
     </section>
 
     <section id="contato">
-        <div class="contato">
-            <h2>Embarque Conosco!</h2>
-            <p>Fique conectado com o Gema!</p>
-            <div class="contato-img">
+        <div class="text-center bg-azul p-5">
+            <h2 class="text-branco">Embarque Conosco!</h2>
+            <p class="text-small text-bege">Fique conectado com o Gema!</p>
+            
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
                 <img id="youtube-img" src="./img/youtube.png" alt="icone do youtube">
                 <img id="instagram-img" src="./img/instagram.png" alt="icone do instagram">
                 <img id="telegram-img" src="./img/telegram.png" alt="icone do telegram">
@@ -199,18 +136,18 @@
     </section>
 
     <section id="footer">
-        <div class="footer">
-            <p>Gema - ICMC USP 2024</p>
-            <p>Desenvolvido pelo <span class="text-azul">Codelab</span></p>
+        <div class="d-flex align-items-center justify-content-between bg-preto p-2">
+            <p class="text-footer">Gema - ICMC USP 2024</p>
+            <p class="text-footer">Desenvolvido pelo <span class="text-azul">Codelab</span></p>
         </div>
     </section>
+    
+    <div id="modall" class="modall">
 
-    <div id="modal" class="modal">
-
-        <div class="modal-container">
+        <div class="modall-container">
             <span class="close">&times;</span>
 
-            <div id="modal-content" class="modal-content">
+            <div id="modall-content" class="modall-content">
 
             </div>
         </div>
