@@ -1,6 +1,35 @@
+// cria os backgrounds GEMA GEMA GEMA e 0 1 0 1
+const createCanvas = (canvasText, textColor, darkOrLight) => {
 
-var modal = document.getElementById('modall');
-var modalContentHTML = document.getElementById('modall-content');
+    const canvas = document.createElement("canvas");
+    const fontSize = 30;
+    canvas.setAttribute('height', fontSize);
+    var context = canvas.getContext('2d');
+
+    context.fillStyle = darkOrLight === 'dark' ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.04)' ;
+    context.color = textColor
+    context.font = fontSize + 'px sans-serif';
+    context.lineHeight = '45px'
+    context.fillText(canvasText, 7, fontSize);
+    
+    return canvas
+}
+
+// background 0 1 0 1 ...
+const bgBinario = [...document.getElementsByClassName('bg-binario')]
+
+bgBinario.forEach( (e) => {
+    const text = '0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1';
+    e.style.backgroundImage = "url(" + createCanvas(text, '#191946','dark').toDataURL("image/png")+ ")" ;
+})
+
+// background GEMA
+const bgGema = [...document.getElementsByClassName('bg-gema')]
+
+bgGema.forEach( (e) => {
+    const text = 'GEMA GEMA GEMA GEMA';
+    e.style.backgroundImage = "url(" + createCanvas(text, '#D2D2D2', 'light').toDataURL("image/png")+ ")" ;
+})
 
 
 const renderCampCards = () => {
@@ -42,12 +71,8 @@ const renderCampCards = () => {
 
 renderCampCards()
 
-const handleModalClick = (e) => {
-    const cardNumber = e.target.id.split('-').pop()
-    const campeonato = info.campeonatos[cardNumber]
-    modalContentHTML.innerHTML = modalHeader(campeonato) + modalContent(campeonato)
-    modal.style.display = "block";
-}
+var modal = document.getElementById('modall');
+var modalContentHTML = document.getElementById('modall-content');
 
 const modalHeader = (campeonatoObject) => {
     nomeCampeonato = campeonatoObject.nome
@@ -85,6 +110,13 @@ const modalContent = (campeonatoObject) => {
         `
     }
     return htmlContent
+}
+
+const handleModalClick = (e) => {
+    const cardNumber = e.target.id.split('-').pop()
+    const campeonato = info.campeonatos[cardNumber]
+    modalContentHTML.innerHTML = modalHeader(campeonato) + modalContent(campeonato)
+    modal.style.display = "block";
 }
 
 // Botoes para abrir o modal
