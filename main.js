@@ -35,27 +35,29 @@ bgGema.forEach( (e) => {
 const renderCampCards = () => {
     const cardItem = (campName, imgURL, qntOuro, qntPrata, qntBronze, index) => {
         return `
-        <div class="card py-4">
-        <img class="premios-img" src="${imgURL}" alt="simbolo do campeonato ${campName}">
-        <div class="d-flex justify-content-evenly mt-3 mb-2">
-            <div class="d-flex align-items-center">
-                <img src="./img/medalha_ouro.png" alt="medalhas de ouro">
-                <p class="text-small">${qntOuro}</p>
-            </div>
-            <div class="d-flex align-items-center">
-                <img src="./img/medalha_prata.png" alt="medalhas de prata">
-                <p class="text-small">${qntPrata}</p>
-            </div>
-            <div class="d-flex align-items-center">
-                <img src="./img/medalha_bronze.png" alt="medalhas de bronze">
-                <p class="text-small">${qntBronze}</p>
+        <div class="col-12 col-md-8 col-lg-4 my-3">
+            <div class="card py-4">
+                <img class="premios-img" src="${imgURL}" alt="simbolo do campeonato ${campName}">
+                <div class="d-flex justify-content-evenly mt-3 mb-2">
+                    <div class="d-flex align-items-center">
+                        <img src="./img/medalha_ouro.png" alt="medalhas de ouro">
+                        <p class="text-small">${qntOuro}</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="./img/medalha_prata.png" alt="medalhas de prata">
+                        <p class="text-small">${qntPrata}</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="./img/medalha_bronze.png" alt="medalhas de bronze">
+                        <p class="text-small">${qntBronze}</p>
+                    </div>
+                </div>
+                
+                <p class="text-small px-3 mb-2">${campName}</p>
+                
+                <button id="campCard-${index}" class=" mx-auto btn-yellow modal-toggle mt-auto">Ver Mais</button>
             </div>
         </div>
-        <div class="px-3">
-            <p class="text-small">${campName}</p>
-            <button id="campCard-${index}" class="mx-auto btn-yellow modal-toggle mt-3">Ver Mais</button>
-        </div>
-    </div>
     `
     }
 
