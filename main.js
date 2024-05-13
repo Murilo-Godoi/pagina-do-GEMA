@@ -53,7 +53,7 @@ const renderCampCards = () => {
         </div>
         <div class="px-3">
             <p class="text-small">${campName}</p>
-            <button id="campCard-${index}" class="mx-auto btn-yellow modall-toggle mt-3">Ver Mais</button>
+            <button id="campCard-${index}" class="mx-auto btn-yellow modal-toggle mt-3">Ver Mais</button>
         </div>
     </div>
     `
@@ -71,16 +71,14 @@ const renderCampCards = () => {
 
 renderCampCards()
 
-var modal = document.getElementById('modall');
-var modalContentHTML = document.getElementById('modall-content');
-
 const modalHeader = (campeonatoObject) => {
     nomeCampeonato = campeonatoObject.nome
     imgURL = campeonatoObject.imagem
     return `
-        <div class="modall-header">
+        <div class="modal-header justify-content-between">
             <img src="${imgURL}" alt="">
-            <h3>${nomeCampeonato}</h3>
+            <h3 class="mx-3">${nomeCampeonato}</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
     `
 }
@@ -90,46 +88,55 @@ const modalContent = (campeonatoObject) => {
     let htmlContent = ''
     const anos = campeonatoObject.anos
     
-    for (const [year, arrayMedalhistas] of Object.entries(anos)) {
+    for (const year of Object.keys(anos).reverse()) {
 
         let medalhistas = ''
+        const arrayMedalhistas = anos[year]
         arrayMedalhistas.forEach((i) => {
             medalhistas += `
-                <div class="modall-medalhista">
-                    <p class="medalhista-posicao">${i.posicao}</p>
-                    <img src="./img/medalha_${i.medalha}.png" alt="medalha de ${i.medalha}">
-                    <p>${i.nome}</p>
+                <div class="d-flex align-items-center fs-4">
+                    <p class="medalhista-posicao mb-0">${i.posicao}</p>
+                    <img src="./img/medalha_${i.medalha}.png" alt="medalha de ${i.medalha}" class="ms-2">
+                    <p class="mb-0">${i.nome}</p>
                 </div>
             `
         })
         htmlContent += `
-            <div class="modall-year">
+            <div class="mb-4">
                 <h4>${year}</h4>
                 ${medalhistas}
             </div>
         `
     }
-    return htmlContent
+    return `
+        <div class="modal-body">
+            ${htmlContent}
+        </div>
+    `
 }
 
 const handleModalClick = (e) => {
+    const modal = document.getElementById('modal');
+    const modalDialog = document.getElementById('modal-content');
+    
     const cardNumber = e.target.id.split('-').pop()
     const campeonato = info.campeonatos[cardNumber]
-    modalContentHTML.innerHTML = modalHeader(campeonato) + modalContent(campeonato)
+    modalDialog.innerHTML = modalHeader(campeonato) + modalContent(campeonato);
     modal.style.display = "block";
+
+    // fecha o modal se clicar no X
+    document.getElementsByClassName("btn-close")[0].onclick = function() {
+    modal.style.display = "none";
+}
 }
 
 // Botoes para abrir o modal
-modal_togglers = [...document.getElementsByClassName("modall-toggle")] 
+modal_togglers = [...document.getElementsByClassName("modal-toggle")] 
 
 modal_togglers.forEach(element => {
     element.onclick = (e) => handleModalClick(e)
 });
 
-// fecha o modal se clicar no X
-document.getElementsByClassName("close")[0].onclick = function() {
-    modal.style.display = "none";
-}
 
 // fecha o modal se clicar fora dele
 window.onclick = function(event) {
