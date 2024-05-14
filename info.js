@@ -307,8 +307,16 @@ const info = {
     "Noticias":
         [
             {
-                "titulo": "Noticia",
-                "imagem": "link"
+                "titulo": "GEMA é Classificado para o Mundial de 2024",
+                "imagem": "./img/gema_na_midia_img.png"
+            },
+            {
+                "titulo": "GEMA é Classificado para o Mundial de 2024. Testando uma notícia com texto maior",
+                "imagem": "./img/gema_na_midia_img.png"
+            },
+            {
+                "titulo": "GEMA é Classificado para o Mundial de 2024",
+                "imagem": "./img/gema_na_midia_img.png"
             }
         ]
 }

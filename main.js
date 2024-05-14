@@ -32,6 +32,7 @@ bgGema.forEach( (e) => {
 })
 
 
+// renderiza os cards
 const renderCampCards = () => {
     const cardItem = (campName, imgURL, qntOuro, qntPrata, qntBronze, index) => {
         return `
@@ -67,12 +68,34 @@ const renderCampCards = () => {
         const qntOuro = camp.medalhas.ouro.total
         const qntPrata = camp.medalhas.prata.total
         const qntBronze = camp.medalhas.bronze.total
-        document.getElementById('card-container').innerHTML += cardItem(campName, imgURL, qntOuro, qntPrata, qntBronze, index)
+        document.getElementById('card-campeonatos-container').innerHTML += cardItem(campName, imgURL, qntOuro, qntPrata, qntBronze, index)
     })
 }
 
 renderCampCards()
 
+const renderNewsCards = () => {
+    const cardItem = (newsText, imgURL) => {
+        return `
+        <div class="col-12 col-md-8 col-lg-4 my-3">
+            <div class="card">
+                <img src="${imgURL}" alt="imagem da notícia" class="card-img-top">
+                <div class="mt-2">
+                    <p class="text-small">${newsText}</p>
+                </div>
+            </div>
+        </div>
+    `
+    }   
+    info.Noticias.forEach((noticia) => {
+        console.log(noticia)
+        document.getElementById('card-noticias-container').innerHTML += cardItem(noticia.titulo, noticia.imagem)
+    })
+
+}
+renderNewsCards()
+
+// Modal
 const modalHeader = (campeonatoObject) => {
     nomeCampeonato = campeonatoObject.nome
     imgURL = campeonatoObject.imagem
