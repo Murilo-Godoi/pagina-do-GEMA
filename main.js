@@ -78,9 +78,9 @@ const renderNewsCards = () => {
     const cardItem = (newsText, imgURL) => {
         return `
         <div class="col-12 col-md-8 col-lg-4 my-3">
-            <div class="card">
+            <div class="card cursor-pointer">
                 <img src="${imgURL}" alt="imagem da notícia" class="card-img-top">
-                <div class="mt-2">
+                <div class="mt-2 p-2">
                     <p class="text-small">${newsText}</p>
                 </div>
             </div>
