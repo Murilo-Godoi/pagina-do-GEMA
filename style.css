@@ -83,6 +83,11 @@ h2 {
     border-radius: 1.5rem;
 }
 
+.border-radius-card-bottom{
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
 .cursor-pointer:hover{
     cursor: pointer;
 }
@@ -147,6 +152,14 @@ e por isso nao alinha */
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+/* Midia */
+.card-img-top {
+    width: 100%;
+    max-height: 225px;
+    min-height: 225px;
+    object-fit: cover;
 }
 
 /* Premios */

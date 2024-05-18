@@ -1,3 +1,13 @@
+async function fetchData() {
+    try {
+        const response = await fetch('GemaData.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
 // cria os backgrounds GEMA GEMA GEMA e 0 1 0 1
 const createCanvas = (canvasText, textColor, darkOrLight) => {
 
@@ -33,7 +43,7 @@ bgGema.forEach( (e) => {
 
 
 // renderiza os cards
-const renderCampCards = () => {
+const renderCampCards = (info) => {
     const cardItem = (campName, imgURL, qntOuro, qntPrata, qntBronze, index) => {
         return `
         <div class="col-12 col-md-8 col-lg-4 my-3">
@@ -41,15 +51,15 @@ const renderCampCards = () => {
                 <img class="premios-img" src="${imgURL}" alt="simbolo do campeonato ${campName}">
                 <div class="d-flex justify-content-evenly mt-3 mb-2">
                     <div class="d-flex align-items-center">
-                        <img src="./img/medalha_ouro.png" alt="medalhas de ouro">
+                        <img src="./img/premios/medalha_ouro.png" alt="medalhas de ouro">
                         <p class="text-small">${qntOuro}</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <img src="./img/medalha_prata.png" alt="medalhas de prata">
+                        <img src="./img/premios/medalha_prata.png" alt="medalhas de prata">
                         <p class="text-small">${qntPrata}</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <img src="./img/medalha_bronze.png" alt="medalhas de bronze">
+                        <img src="./img/premios/medalha_bronze.png" alt="medalhas de bronze">
                         <p class="text-small">${qntBronze}</p>
                     </div>
                 </div>
@@ -64,7 +74,7 @@ const renderCampCards = () => {
 
     info.campeonatos.forEach((camp, index)=>{
         const imgURL = camp.imagem
-        const campName = camp.nome
+        const campName = `${camp.nomeCompleto} (${camp.nome})`
         const qntOuro = camp.medalhas.ouro.total
         const qntPrata = camp.medalhas.prata.total
         const qntBronze = camp.medalhas.bronze.total
@@ -72,15 +82,13 @@ const renderCampCards = () => {
     })
 }
 
-renderCampCards()
-
-const renderNewsCards = () => {
+const renderNewsCards = (info) => {
     const cardItem = (newsText, imgURL) => {
         return `
         <div class="col-12 col-md-8 col-lg-4 my-3">
-            <div class="card cursor-pointer">
-                <img src="${imgURL}" alt="imagem da notícia" class="card-img-top">
-                <div class="mt-2 p-2">
+            <div class="card cursor-pointer bg-transparent">
+                <img src="${imgURL}" alt="imagem da notícia" class="card-img-top">            
+                <div class="p-2 bg-white h-100 border-radius-card-bottom d-flex align-items-center">
                     <p class="text-small">${newsText}</p>
                 </div>
             </div>
@@ -88,16 +96,14 @@ const renderNewsCards = () => {
     `
     }   
     info.Noticias.forEach((noticia) => {
-        console.log(noticia)
         document.getElementById('card-noticias-container').innerHTML += cardItem(noticia.titulo, noticia.imagem)
     })
 
 }
-renderNewsCards()
 
 // Modal
 const modalHeader = (campeonatoObject) => {
-    nomeCampeonato = campeonatoObject.nome
+    nomeCampeonato = campeonatoObject.nomeCompleto
     imgURL = campeonatoObject.imagem
     return `
         <div class="modal-header justify-content-between">
@@ -121,7 +127,7 @@ const modalContent = (campeonatoObject) => {
             medalhistas += `
                 <div class="d-flex align-items-center fs-4">
                     <p class="medalhista-posicao mb-0">${i.posicao}</p>
-                    <img src="./img/medalha_${i.medalha}.png" alt="medalha de ${i.medalha}" class="ms-2">
+                    <img src="./img/premios/medalha_${i.medalha}.png" alt="medalha de ${i.medalha}" class="ms-2">
                     <p class="mb-0">${i.nome}</p>
                 </div>
             `
@@ -140,7 +146,7 @@ const modalContent = (campeonatoObject) => {
     `
 }
 
-const handleModalClick = (e) => {
+const handleModalClick = (e, info) => {
     const modal = document.getElementById('modal');
     const modalDialog = document.getElementById('modal-content');
     
@@ -155,17 +161,26 @@ const handleModalClick = (e) => {
 }
 }
 
-// Botoes para abrir o modal
-modal_togglers = [...document.getElementsByClassName("modal-toggle")] 
+async function initialize() {
+    const info = await fetchData();
+    if (info) {
+        renderCampCards(info);
+        renderNewsCards(info);
 
-modal_togglers.forEach(element => {
-    element.onclick = (e) => handleModalClick(e)
-});
+        // Botoes para abrir o modal
+        const modal_togglers = [...document.getElementsByClassName("modal-toggle")];
+        modal_togglers.forEach(element => {
+            element.onclick = (e) => handleModalClick(e, info);
+        });
 
-
-// fecha o modal se clicar fora dele
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+        // fecha o modal se clicar fora dele
+        const modal = document.getElementById('modal');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     }
 }
+
+initialize();

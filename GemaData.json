@@ -1,0 +1,194 @@
+{
+    "campeonatos": [
+        {
+            "nome": "OBI",
+            "nomeCompleto": "Olimpíada Brasileira de Informática",
+            "imagem": "./img/premios/olimpiada_brasileira.png",
+            "medalhas": {
+                "ouro": {"total": 5, "medalhistas": [
+                    {"nome": "Pietra", "ano": 2023, "posicao": 5},
+                    {"nome": "Matheo", "ano": 2022, "posicao": 4},
+                    {"nome": "Bruno", "ano": 2022, "posicao": 4},
+                    {"nome": "Kenzo", "ano": 2021, "posicao": 4},
+                    {"nome": "Frederico", "ano": 2019, "posicao": 3}
+                ]},
+                "prata": {"total": 8, "medalhistas": [
+                    {"nome": "Luiz", "ano": 2023, "posicao": 12},
+                    {"nome": "Ferreira", "ano": 2019, "posicao": 6},
+                    {"nome": "Fraga", "ano": 2019, "posicao": 8},
+                    {"nome": "Vinicius", "ano": 2018, "posicao": 10},
+                    {"nome": "Cezar", "ano": 2016, "posicao": 4},
+                    {"nome": "Lucas", "ano": 2015, "posicao": 3},
+                    {"nome": "Victor", "ano": 2015, "posicao": 5},
+                    {"nome": "Gema", "ano": 2012, "posicao": 8}
+                ]},
+                "bronze": {"total": 18, "medalhistas": [
+                    {"nome": "Bruno", "ano": 2023, "posicao": 16},
+                    {"nome": "Thales", "ano": 2023, "posicao": 18},
+                    {"nome": "Allan", "ano": 2022, "posicao": 26},
+                    {"nome": "Arthur", "ano": 2022, "posicao": 30},
+                    {"nome": "Rhavy", "ano": 2022, "posicao": 33},
+                    {"nome": "Henrique", "ano": 2021, "posicao": 16},
+                    {"nome": "Antonio", "ano": 2021, "posicao": 21},
+                    {"nome": "João", "ano": 2020, "posicao": 12},
+                    {"nome": "Sofhia", "ano": 2020, "posicao": 15},
+                    {"nome": "Victor", "ano": 2020, "posicao": 15},
+                    {"nome": "Thiago", "ano": 2019, "posicao": 10},
+                    {"nome": "Tamiris", "ano": 2018, "posicao": 14},
+                    {"nome": "Gema", "ano": 2017, "posicao": 9},
+                    {"nome": "Gema", "ano": 2017, "posicao": 16},
+                    {"nome": "Jiang", "ano": 2016, "posicao": 10},
+                    {"nome": "Gema", "ano": 2012, "posicao": 14},
+                    {"nome": "Gema", "ano": 2010, "posicao": 16},
+                    {"nome": "Gema", "ano": 2010, "posicao": 18}
+                ]}
+            },
+            "anos": {
+                "2023": [
+                    {"posicao": 5, "nome": "Pietra", "medalha": "ouro"},
+                    {"posicao": 12, "nome": "Luiz", "medalha": "prata"},
+                    {"posicao": 16, "nome": "Bruno", "medalha": "bronze"},
+                    {"posicao": 18, "nome": "Thales", "medalha": "bronze"}
+                ],
+                "2022": [
+                    {"posicao": 4, "nome": "Matheo", "medalha": "ouro"},
+                    {"posicao": 4, "nome": "Bruno", "medalha": "ouro"},
+                    {"posicao": 26, "nome": "Allan", "medalha": "bronze"},
+                    {"posicao": 30, "nome": "Arthur", "medalha": "bronze"},
+                    {"posicao": 33, "nome": "Rhavy", "medalha": "bronze"}
+                ],
+                "2021": [
+                    {"posicao": 4, "nome": "Kenzo", "medalha": "ouro"},
+                    {"posicao": 16, "nome": "Henrique", "medalha": "bronze"},
+                    {"posicao": 21, "nome": "Antonio", "medalha": "bronze"}
+                ],
+                "2020": [
+                    {"posicao": 12, "nome": "João", "medalha": "bronze"},
+                    {"posicao": 15, "nome": "Sofhia", "medalha": "bronze"},
+                    {"posicao": 15, "nome": "Victor", "medalha": "bronze"}
+                ],
+                "2019": [
+                    {"posicao": 3, "nome": "Frederico", "medalha": "ouro"},
+                    {"posicao": 6, "nome": "Ferreira", "medalha": "prata"},
+                    {"posicao": 8, "nome": "Fraga", "medalha": "prata"},
+                    {"posicao": 10, "nome": "Thiago", "medalha": "bronze"}
+                ],
+                "2018": [
+                    {"posicao": 10, "nome": "Vinicius", "medalha": "prata"},
+                    {"posicao": 14, "nome": "Tamiris", "medalha": "bronze"}
+                ],
+                "2017": [
+                    {"posicao": 9, "nome": "Gema", "medalha": "bronze"},
+                    {"posicao": 16, "nome": "Gema", "medalha": "bronze"}
+                ],
+                "2016": [
+                    {"posicao": 4, "nome": "Cezar", "medalha": "prata"},
+                    {"posicao": 10, "nome": "Jiang", "medalha": "bronze"}
+                ],
+                "2015": [
+                    {"posicao": 3, "nome": "Lucas", "medalha": "prata"},
+                    {"posicao": 5, "nome": "Victor", "medalha": "prata"}
+                ],
+                "2012": [
+                    {"posicao": 8, "nome": "Gema", "medalha": "prata"},
+                    {"posicao": 14, "nome": "Gema", "medalha": "bronze"}
+                ],
+                "2010": [
+                    {"posicao": 16, "nome": "Gema", "medalha": "bronze"},
+                    {"posicao": 18, "nome": "Gema", "medalha": "bronze"}
+                ]
+            }
+        },
+        {
+            "nome": "ICPC Nacional",
+            "nomeCompleto": "International Collegiate Programming Contest",
+            "imagem":"./img/premios/ICPC.png",
+            "medalhas": {
+                "ouro": {"total": 5, "medalhistas": [ 
+                    {"nome": "Gema", "ano": 2021, "posicao": 4},
+                    {"nome": "Gema", "ano": 2018, "posicao": 1},
+                    {"nome": "Gema", "ano": 2017, "posicao": 2},
+                    {"nome": "Gema", "ano": 2015, "posicao": 3},
+                    {"nome": "Gema", "ano": 2013, "posicao": 1}
+                ]},
+                "prata": {"total": 4, "medalhistas": [
+                    {"nome": "Gema", "ano": 2023, "posicao": 8},
+                    {"nome": "Gema", "ano": 2020, "posicao": 4},
+                    {"nome": "Gema", "ano": 2019, "posicao": 6},
+                    {"nome": "Gema", "ano": 2012, "posicao": 4}
+                    ]},
+                "bronze": {"total": 2, "medalhistas": [
+                    {"nome": "Gema", "ano": 2022, "posicao": 10},
+                    {"nome": "Gema", "ano": 2021, "posicao": 12}
+                ]}
+            },
+            "anos": {
+                "2023": [
+                    {"posicao": 8, "nome": "Gema", "medalha": "prata"}
+                ],
+                "2022": [
+                    {"posicao": 10, "nome": "Gema", "medalha": "bronze"}
+                ],
+                "2021": [
+                    {"posicao": 4, "nome": "Gema", "medalha": "ouro"},
+                    {"posicao": 12, "nome": "Gema", "medalha": "bronze"}
+                ],
+                "2020": [
+                    {"posicao": 4, "nome": "Gema", "medalha": "prata"}
+                ],
+                "2019": [
+                    {"posicao": 6, "nome": "Gema", "medalha": "prata"}
+                ],
+                "2018": [
+                    {"posicao": 1, "nome": "Gema", "medalha": "ouro"}
+                ],
+                "2017": [
+                    {"posicao": 2, "nome": "Gema", "medalha": "ouro"}
+                ],
+                "2015": [
+                    {"posicao": 3, "nome": "Gema", "medalha": "ouro"}
+                ],
+                "2013": [
+                    {"posicao": 1, "nome": "Gema", "medalha": "ouro"}
+                ],
+                "2012": [
+                    {"posicao": 4, "nome": "Gema", "medalha": "prata"}
+                ]
+            }
+        },
+        {
+            "nome": "MFP",
+            "nomeCompleto":"Maratona Feminina de Programação",
+            "imagem":"./img/premios/maratona_feminina.png",
+            "medalhas": {
+                "ouro": {"total": 1, 
+                    "medalhistas": [
+                    {"nome": "Pietra", "ano": 2023, "posicao": 1}
+                ]
+                },
+                "prata": {"total": 0, "medalhistas": []},
+                "bronze": {"total": 0, "medalhistas": []}
+            },
+            "anos": {
+                "2023": [
+                    {"posicao": 1, "nome": "Pietra", "medalha": "ouro"}
+                ]
+            }
+        }
+    ],
+    "Noticias":
+    [
+        {
+            "titulo": "GEMA se classifica para o mundial da ICPC",
+            "imagem": "./img/noticias/noticia1.jpeg"
+        },
+        {
+            "titulo": "Pietra do GEMA é campeã da MFP",
+            "imagem": "./img/noticias/noticia2.jpeg"
+        },
+        {
+            "titulo": "OBI 2023: Uma das melhores participações do GEMA",
+            "imagem": "./img/noticias/noticia3.jpeg"
+        }
+    ]
+}
