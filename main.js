@@ -47,7 +47,7 @@ const renderCampCards = (info) => {
     const cardItem = (campName, imgURL, qntOuro, qntPrata, qntBronze, index) => {
         return `
         <div class="col-12 col-md-8 col-lg-4 my-3">
-            <div class="card py-4">
+            <div class="card py-4 grow-on-hover">
                 <img class="premios-img" src="${imgURL}" alt="simbolo do campeonato ${campName}">
                 <div class="d-flex justify-content-evenly mt-3 mb-2">
                     <div class="d-flex align-items-center">
@@ -86,7 +86,7 @@ const renderNewsCards = (info) => {
     const cardItem = (newsText, imgURL) => {
         return `
         <div class="col-12 col-md-8 col-lg-4 my-3">
-            <div class="card cursor-pointer bg-transparent">
+            <div class="card cursor-pointer bg-transparent grow-on-hover">
                 <img src="${imgURL}" alt="imagem da notícia" class="card-img-top">            
                 <div class="p-2 bg-white h-100 border-radius-card-bottom d-flex align-items-center">
                     <p class="text-small">${newsText}</p>
@@ -160,6 +160,37 @@ const handleModalClick = (e, info) => {
     modal.style.display = "none";
 }
 }
+
+// fade in on scroll
+const fadeContentOnScroll = (container) => {
+    const content = container.querySelector('.fade-content');
+    const onScroll = () => {
+        const containerRect = container.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // checa se o container ta na tela quando scrollando uma direção
+        const deCimaPraBaixo = containerRect.top - windowHeight;
+        const deBaixoPraCima = containerRect.top + containerRect.height;
+        const isOnScreen = deCimaPraBaixo < -100 //&& deBaixoPraCima > 100;
+
+        if (isOnScreen) {
+            content.style.opacity = '1';
+            content.style.transform = 'translateX(0)';
+        } else {
+            content.style.opacity = '0';
+            content.style.transform = 'translateX(-50px)';
+        }
+    };
+
+    window.addEventListener('scroll', onScroll);
+}
+
+// fade in on scroll
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.fade-con').forEach((element) => {
+        fadeContentOnScroll(element);
+    });
+});
 
 async function initialize() {
     const info = await fetchData();

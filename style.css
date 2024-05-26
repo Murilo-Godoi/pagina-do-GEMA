@@ -92,6 +92,22 @@ h2 {
     cursor: pointer;
 }
 
+/* Efeitos */
+.grow-on-hover{
+    transition: all 0.3s;
+    position: relative;
+}
+  
+.grow-on-hover:hover{
+    transform: scale(1.1);
+}
+
+.fade-content {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s, transform 1s;
+  }
+
 /* Primeira sessão do site */
 .cover  {
     min-height: 100vh;
