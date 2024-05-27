@@ -22,7 +22,9 @@ a{
 
 /* Estilos de texto */
 h1 {
-    font-weight: 800;
+    font-size: 9vw;
+    line-height: 10.5vw;
+    font-weight: 600;
 }
 
 h2 {
@@ -46,11 +48,31 @@ h2 {
     margin-bottom: 0;
 }
 
-
 @media (min-width: 768px) {
+    h1{
+        font-size: 6vw;
+        line-height: 7.5vw;
+        font-weight: 800;
+    }
+    h2{
+        font-size: 2.6vw;
+        line-height: 3.9vw;
+    }
+    .text-medio {   
+        font-size: 1.56vw;
+        line-height: 2.34vw;
+    }
+    .text-grande {
+        font-size: 1.77vw;
+        line-height: 2.65vw;
+    }
+}
+
+@media (min-width: 992px) {
     h1{
         font-size: 3.125vw;
         line-height: 4.69vw;
+        font-weight: 800;
     }
     h2{
         font-size: 2.6vw;
@@ -101,13 +123,13 @@ h2 {
 .grow-on-hover:hover{
     transform: scale(1.1);
 }
-
-.fade-content {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.5s, transform 1s;
-  }
-
+@media (min-width: 992px) {
+    .fade-content {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.5s, transform 1s;
+    }
+}
 /* Primeira sessão do site */
 .cover  {
     min-height: 100vh;
